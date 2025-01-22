@@ -190,12 +190,15 @@ app.use((err, req, res, next) => {
 
 
 (async () => {
+  const appid = process.env.APPID; // Accessing appid from environment variables
+ // Accessing developer API key from environment variables
   try {
+    const developerApiKey = process.env.DEVELOPER_API_KEY;
     const hubspot = await import("@hubspot/api-client");
     const channels = await getChannelsFromAPI();
-
+    // console.log(developerApiKey);
     const hubspotClient = new hubspot.Client({
-      developerApiKey: "0636eb80-296c-412c-bbcb-44512c603113",
+      developerApiKey: `0636eb80-296c-412c-bbcb-44512c603113`,
     });
 
     // Get updated template data
@@ -285,7 +288,7 @@ app.use((err, req, res, next) => {
     };
 
     const definitionId = "187782059";
-    const appId = 7121167;
+    const appId = appid;
 
     async function updateTemplateOptions() {
       try {

@@ -1,7 +1,11 @@
 require("dotenv").config();
 const db = require("../config/database");
 
+const appid = process.env.APPID; // Accessing appid from environment variables
+const developerApiKey = process.env.DEVELOPER_API_KEY; // Accessing developer API key from environment variables
+
 // Controller to fetch contacts from HubSpot API
+
 const fetchHubSpotContacts = async () => {
   // Query to fetch the access token from the database
   const query = `SELECT access_token FROM settings WHERE id = 1`; // Assuming access_token is stored in the 'settings' table
@@ -33,10 +37,6 @@ const fetchHubSpotContacts = async () => {
       redirect: "follow",
     };
 
-    // Make the fetch request to the HubSpot API
-    const response = await fetch(apiUrl, requestOptions);
-
-    // Ensure response is okay (status 200 range)
     if (!response.ok) {
       throw new Error(`Error fetching contacts: ${response.statusText}`);
     }

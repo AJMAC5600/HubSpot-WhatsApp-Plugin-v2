@@ -11,4 +11,6 @@ module.exports = {
     apiUrl: "https://graph.facebook.com/v13.0", // Update with your WhatsApp API URL
     apiKey: process.env.WHATSAPP_API_KEY, // Your WhatsApp API Key
   },
+  appid: process.env.APPID,
+  developerApiKey: process.env.DEVELOPER_API_KEY,
 };
