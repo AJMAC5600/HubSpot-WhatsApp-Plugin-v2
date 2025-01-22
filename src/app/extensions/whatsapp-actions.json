@@ -1,0 +1,27 @@
+{
+  "name": "Send WhatsApp Message",
+  "description": "Sends a WhatsApp message using the selected template",
+  "inputs": [
+    {
+      "name": "phone_number",
+      "type": "text",
+      "label": "Phone Number",
+      "required": true
+    },
+    {
+      "name": "template",
+      "type": "dropdown",
+      "label": "Select Template",
+      "options": [
+        {
+          "label": "Order Shipped",
+          "value": "order_shipped"
+        },
+        {
+          "label": "Order Cancelled",
+          "value": "order_cancelled"
+        }
+      ]
+    }
+  ]
+}

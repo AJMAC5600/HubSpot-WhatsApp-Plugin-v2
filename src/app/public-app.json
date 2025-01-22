@@ -1,0 +1,43 @@
+{
+  "name": "Hubspot WhatsApp",
+  "uid": "whatsapp-integration-app",
+  "description": "An app to integrate WhatsApp messaging in HubSpot workflows.",
+  "allowedUrls": ["https://api.example.com"],
+  "auth": {
+    "redirectUrls": [
+      "https://7531-2405-201-10-d877-8d35-a46a-f2de-eadd.ngrok-free.app/oauth/callback"
+    ],
+    "requiredScopes": [
+      "crm.objects.contacts.read",
+      "crm.objects.contacts.write",
+      "oauth",
+      "automation",
+      "actions"
+    ],
+    "optionalScopes": [],
+    "conditionallyRequiredScopes": []
+  },
+  "support": {
+    "supportEmail": "support@example.com",
+    "documentationUrl": "https://example.com/docs",
+    "supportUrl": "https://example.com/support",
+    "supportPhone": "+18005555555"
+  },
+  "extensions": {
+    "crm": {
+      "cards": [
+        {
+          "file": "./extensions/example-card.json"
+        }
+      ]
+    },
+    "actions": [
+      {
+        "file": "./actions/whatsapp-action.json"
+      }
+    ]
+  },
+  "webhooks": {
+    "file": "./webhooks/webhooks.json"
+  }
+}

@@ -1,0 +1,25 @@
+diff --git a/node_modules/@hubspot/ui-extensions/dist/index.js b/node_modules/@hubspot/ui-extensions/dist/index.js
+index ebb5246..73ea5d4 100644
+--- a/node_modules/@hubspot/ui-extensions/dist/index.js
++++ b/node_modules/@hubspot/ui-extensions/dist/index.js
+@@ -4,3 +4,19 @@ export { hubspot } from './hubspot';
+ export { logger } from './logger';
+ export * from './coreComponents';
+ export * from './types';
++const InputText = ({ value, onChange }) => (
++    <input
++      type="text"
++      value={value}
++      onChange={onChange}
++      style={{
++        padding: '8px',
++        border: '1px solid #ccc',
++        borderRadius: '4px',
++        fontSize: '14px',
++      }}
++    />
++  );
++  
++  export default InputText;
++  
+\ No newline at end of file

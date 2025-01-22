@@ -1,0 +1,47 @@
+<!-- views/settings.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plugin Settings</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>Plugin Settings</h1>
+    <form action="/settings/save" method="POST">
+      <label for="hubspotClientId">HubSpot Client ID:</label>
+      <input
+        type="text"
+        id="hubspotClientId"
+        name="hubspotClientId"
+        placeholder="Enter HubSpot Client ID"
+        required
+      />
+
+      <label for="hubspotClientSecret">HubSpot Client Secret:</label>
+      <input
+        type="text"
+        id="hubspotClientSecret"
+        name="hubspotClientSecret"
+        placeholder="Enter HubSpot Client Secret"
+        required
+      />
+
+      <label for="whatsappApiKey">WhatsApp API Key:</label>
+      <input
+        type="text"
+        id="whatsappApiKey"
+        name="whatsappApiKey"
+        placeholder="Enter WhatsApp API Key"
+        required
+      />
+
+      <button type="submit">Save Settings</button>
+    </form>
+
+    <% if (typeof message !== 'undefined') { %>
+    <div class="success-message"><%= message %></div>
+    <% } %>
+  </body>
+</html>

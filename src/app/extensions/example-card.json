@@ -1,0 +1,40 @@
+{
+  "type": "crm-card",
+  "data": {
+    "title": "Send WhatsApp Message",
+    "uid": "whatsapp-message-card",
+    "location": "crm.record.tab",
+    "module": {
+      "file": "bundle.js"
+    },
+    "objectTypes": [
+      {
+        "name": "contacts"
+      }
+    ],
+    "cardProperties": [
+      {
+        "label": "WhatsApp Number",
+        "key": "whatsapp_number",
+        "fieldType": "TEXT",
+        "required": true
+      },
+      {
+        "label": "Template Name",
+        "key": "template_name",
+        "fieldType": "DROPDOWN",
+        "values": [
+          {
+            "value": "welcome_template",
+            "label": "Welcome Template"
+          },
+          {
+            "value": "follow_up_template",
+            "label": "Follow-Up Template"
+          }
+        ],
+        "required": true
+      }
+    ]
+  }
+}

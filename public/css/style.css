@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #f4f4f4;
+  background-image: url("../img/whatsappbgimage.png");
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: block;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #218838;
+}
+.success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 5px;
+  border: 1px solid #c3e6cb;
+}
+#login-link {
+  text-decoration: none;
+  padding: 10px;
+  border: 10px solid #25d366;
+  background: #25d366;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 27px;
+}
+#login-link:hover {
+  background-color: #1da851;
+  border: 10px solid #1da851;
+}
+#login-link:active {
+  background-color: #1da851;
+  border: 10px solid #1da851;
+  transform: scale(1.1);
+}
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.dynamic-input {
+  display: flex;
+  justify-content: space-between;
+}
+/* new css */
+/* Container for the form */
+/* .container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+/* Label for the select input */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Styling the select element */
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  box-sizing: border-box;
+}
+
+/* Add some padding to the options for better readability */
+select option {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+/* Option for 'Select All' */
+select option[value="true"] {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Add hover effect for better interaction */
+select:hover {
+  border-color: #888;
+  cursor: pointer;
+}
+
+/* Add focus effect to the select field */
+select:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Styling the overall form */
+form {
+  margin-top: 20px;
+}
+
+/* Add spacing between sections */
+.section {
+  margin-bottom: 20px;
+}
+option:nth-child(even) {
+  background-color: #f4f4f4;
+}
+#contact {
+  height: 50px;
+  width: 100%;
+}
+#contact:hover {
+  height: 150px;
+}
