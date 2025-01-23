@@ -196,11 +196,18 @@ app.use((err, req, res, next) => {
     const developerApiKey = process.env.DEVELOPER_API_KEY;
     const hubspot = await import("@hubspot/api-client");
     const channels = await getChannelsFromAPI();
+    try {
+      if (!developerApiKey) {
+        throw new Error("Developer API key not found");
+      }
+    } catch (error) {
+      console.error("Error:", error.message);
+    }
     // console.log(developerApiKey);
     const hubspotClient = new hubspot.Client({
-      developerApiKey: `0636eb80-296c-412c-bbcb-44512c603113`,
+      developerApiKey: developerApiKey,
     });
-
+    
     // Get updated template data
     const templateData = await getChannelTemplates(channels[0].Number);
 
@@ -222,7 +229,7 @@ app.use((err, req, res, next) => {
         };
       })
     );
-
+    
     const PublicActionDefinitionPatch = {
       inputFields: [
         {
